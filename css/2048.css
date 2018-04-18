@@ -1,0 +1,77 @@
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 25rem;
+
+}
+#outFrame{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: burlywood;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+#gameStart{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: orangered;
+    border:1px solid transparent;
+    border-radius: 20px;
+    color: white;
+}
+#gameReplace{
+    margin: 0 0 0 190px;
+    padding: 0;
+    outline: none;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: dodgerblue;
+    border:1px solid transparent;
+    border-radius: 20px;
+    color: white;
+}
+#gameScore{
+    position: relative;
+    line-height: 25px;
+    left: 150px;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    background-color: chocolate;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+}
+.inFrame{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: antiquewhite;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    line-height: 90px;
+    transition: 500ms;
+
+}
+#rules{
+    margin-top: 10px;
+    width: 400px;
+    height: 200px;
+}
