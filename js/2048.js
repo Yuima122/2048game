@@ -288,7 +288,7 @@ Game2048.prototype= {
     //w事件
     keyCodeW:function () {
         var num=0;//判断是否能够移动
-        if(frag==1)//判断游戏是否开始
+        if(frag!=0)//判断游戏是否开始
         {
             var inFrame=$(".inFrame");
             //判断是否有数
@@ -342,11 +342,12 @@ Game2048.prototype= {
             this.gameSore();//刷新得分
             this.gameWin();//判断游戏是否胜利
             this.gameOver();//判断游戏是否结束
-        }},
+        }
+        },
     //s事件
     keyCodeS:function() {
         var num=0;
-        if(frag==1)//判断游戏是否开始
+        if(frag!=0)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
             //判断是否有数
@@ -401,7 +402,7 @@ Game2048.prototype= {
     //A事件
     keyCodeA:function() {
         var num=0;
-        if(frag==1)//判断游戏是否开始
+        if(frag!=0)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
             //判断是否有数
@@ -445,21 +446,22 @@ Game2048.prototype= {
                     }
                 }
             }
+            this.Remix("a",num);
+            if(num!=0)
+            {
+                this.createBox();//随机生成盒子
+            }
+            this.changeColor();//渲染颜色
+            this.gameSore();//刷新得分
+            this.gameWin();//判断游戏是否胜利
+            this.gameOver();//判断游戏是否结束
         }
-        this.Remix("a",num);
-        if(num!=0)
-        {
-            this.createBox();//随机生成盒子
-        }
-        this.changeColor();//渲染颜色
-        this.gameSore();//刷新得分
-        this.gameWin();//判断游戏是否胜利
-        this.gameOver();//判断游戏是否结束
+
     },
     //D事件
     keyCodeD:function() {
         var num=0;
-        if(frag==1)//判断游戏是否开始
+        if(frag!=0)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
             //判断是否有数
@@ -502,16 +504,16 @@ Game2048.prototype= {
                     }
                 }
             }
+            this.Remix("d",num);
+            if(num!=0)
+            {
+                this.createBox();//随机生成盒子
+            }
+            this.changeColor();//渲染颜色
+            this.gameSore();//刷新得分
+            this.gameWin();//判断游戏是否胜利
+            this.gameOver();//判断游戏是否结束
         }
-        this.Remix("d",num);
-        if(num!=0)
-        {
-            this.createBox();//随机生成盒子
-        }
-        this.changeColor();//渲染颜色
-        this.gameSore();//刷新得分
-        this.gameWin();//判断游戏是否胜利
-        this.gameOver();//判断游戏是否结束
     }
 };
 //全局变量，少用（无法回收）,存取了DOM（.inFrame）
