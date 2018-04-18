@@ -247,11 +247,17 @@ Game2048.prototype= {
             {
                 num++;
             }
-            if(num==16){
-                alert("游戏结束啦，请继续努力");
-                this.gameReplace();
+            if(num==16)
+            {
+                if (inFrame.eq(i).html() != inFrame.eq(i + 1).html() &&
+                    inFrame.eq(i).html() != inFrame.eq(i + 4).html() &&
+                    inFrame.eq(i).html() != inFrame.eq(i - 1).html() &&
+                    inFrame.eq(i).html() != inFrame.eq(i - 4).html())
+                {
+                    alert("游戏结束啦，请继续努力");
+                    this.gameReplace();
+                }
             }
-
         }},
     //判断游戏胜利
     gameWin:function () {
