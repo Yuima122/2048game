@@ -196,6 +196,7 @@ Game2048.prototype= {
                         {
                             this.changeOrder(i,i+1);
                         }
+                        inFrame = $(".inFrame");
                     }
 
                 }
@@ -225,6 +226,7 @@ Game2048.prototype= {
                         {
                             this.changeOrder(i,i-1);
                         }
+                        inFrame = $(".inFrame");
                     }
 
                 }
@@ -285,10 +287,10 @@ Game2048.prototype= {
     },
     //w事件
     keyCodeW:function () {
+        var num=0;//判断是否能够移动
         if(frag==1)//判断游戏是否开始
         {
             var inFrame=$(".inFrame");
-            var num=0;//判断是否能够移动
             //判断是否有数
             for (var i = 4; i < 16; i++) {
                 if(i>3&&i<8&&inFrame.eq(i).html()!=""&&inFrame.eq(i-4).html()=="")
@@ -334,7 +336,7 @@ Game2048.prototype= {
             this.Remix("w",num);
             //实现移动时，才创造盒子
             if(num!=0){
-                this.createBox();//随机生成盒子
+                this.createBox();
             }
             this.changeColor();//渲染颜色
             this.gameSore();//刷新得分
@@ -343,10 +345,10 @@ Game2048.prototype= {
         }},
     //s事件
     keyCodeS:function() {
+        var num=0;
         if(frag==1)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
-            var num=0;
             //判断是否有数
             for (var i = 11; i > -1; i--) {
                 if(i>7&&i<12&&inFrame.eq(i+4).html()==""&&inFrame.eq(i).html()!="")
@@ -398,10 +400,10 @@ Game2048.prototype= {
         }},
     //A事件
     keyCodeA:function() {
+        var num=0;
         if(frag==1)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
-            var num=0;
             //判断是否有数
             for (var i = 0; i < 16; i++) {
                 if (i == 1 || i == 5 || i == 9 || i == 13)//第二列
@@ -456,10 +458,10 @@ Game2048.prototype= {
     },
     //D事件
     keyCodeD:function() {
+        var num=0;
         if(frag==1)//判断游戏是否开始
         {
             var inFrame = $(".inFrame");
-            var num=0;
             //判断是否有数
             for (var i = 15; i >-1; i--) {
                 if (i == 2 || i == 6 || i == 10 || i == 14)//第二列
