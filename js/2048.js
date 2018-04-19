@@ -1,4 +1,4 @@
-//函数体，封装主体
+//构造对象，封装主体
 function Game2048() {
 
 }
@@ -168,7 +168,6 @@ Game2048.prototype= {
                         }
                         inFrame = $(".inFrame");
                     }
-
                 }
             }
             if(num==0&&a!=0)
@@ -198,7 +197,6 @@ Game2048.prototype= {
                         }
                         inFrame = $(".inFrame");
                     }
-
                 }
             }
             if(num==0&&a!=0)
